@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Trading Journal</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>My Trading Journal</h1>
+        <h2>Welcome, {{ user.username }}!</h2>
+        <div class="table-wrapper">
+            <table id="recipeTable">
+                <thead>
+                    <tr>
+                        <th>Stock Name</th>
+                        <th>Transaction</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="recipeList">
+                </tbody>
+            </table>
+        </div>
+        <div class="button-container">
+            <button id="addRecipeBtn">+ Add New</button>
+            <a href="{% url 'logout' %}"><button class="logout-btn">Logout</button></a>
+        </div>
+    </div>
+    <script src="{% static 'js/scripts.js' %}"></script>
+</body>
+</html>
