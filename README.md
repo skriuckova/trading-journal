@@ -41,6 +41,53 @@ The main dashboard displays the user's recorded stock transactions, including:
 - Price
 - Edit and delete controls
 
+## Run Locally
+
+Clone the repository:
+
+```bash
+git clone https://github.com/skriuckova/trading-journal.git
+cd trading-journal
+```
+
+Create and activate a virtual environment:
+
+```bash
+python -m venv .venv
+```
+
+On Windows:
+
+```bash
+.venv\Scripts\activate
+```
+
+Install the required dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Create a `.env` file in the project root:
+
+```env
+DJANGO_SECRET_KEY=your-secret-key-here
+```
+
+Run database migrations:
+
+```bash
+python manage.py migrate
+```
+
+Start the development server:
+
+```bash
+python manage.py runserver
+```
+
+Open `http://127.0.0.1:8000/` in your browser.
+
 ## What I Learned
 
 This project helped me strengthen my understanding of:
